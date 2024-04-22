@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sensirion SFX6XXX I2C Python Driver &mdash; sensirion_i2c_sfx6xxx 0.1.0 documentation</title>
@@ -13,10 +13,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=2389946f"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -28,14 +29,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="#" class="icon icon-home"> sensirion_i2c_sfx6xxx
+
+          
+          
+          <a href="#" class="icon icon-home">
+            sensirion_i2c_sfx6xxx
           </a>
               <div class="version">
                 0.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -61,8 +66,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>Sensirion SFX6XXX I2C Python Driver</li>
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Sensirion SFX6XXX I2C Python Driver</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -73,11 +78,11 @@
            <div itemprop="articleBody">
              
   <section id="sensirion-sfx6xxx-i2c-python-driver">
-<h1>Sensirion SFX6XXX I2C Python Driver<a class="headerlink" href="#sensirion-sfx6xxx-i2c-python-driver" title="Permalink to this headline"></a></h1>
+<h1>Sensirion SFX6XXX I2C Python Driver<a class="headerlink" href="#sensirion-sfx6xxx-i2c-python-driver" title="Permalink to this heading"></a></h1>
 <p>This package contains the driver for a Sensirion sensor of the SFX6XXX family.
 It provides a hardware-independent interface which works with various I2C transceivers.</p>
 <section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline"></a></h2>
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
@@ -99,9 +104,246 @@ It provides a hardware-independent interface which works with various I2C transc
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api.html#sfx6xxx">SFX6XXX</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api.html#module-sensirion_i2c_sfx6xxx.device">Sfx6xxxDevice</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api.html#module-sensirion_i2c_sfx6xxx.commands">Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api.html#module-sensirion_i2c_sfx6xxx.result_types">Result Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-sensirion_i2c_sfx6xxx.device">Sfx6xxxDevice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.__init__"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.__init__()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.channel"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.channel</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.read_product_identifier"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.read_product_identifier()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.reset_pointer_to_measurement_buffer"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.reset_pointer_to_measurement_buffer()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.update_setpoint"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.update_setpoint()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.update_init_step"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.update_init_step()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.update_customer_gain"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.update_customer_gain()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.start_o2_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.start_o2_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.start_air_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.start_air_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.start_co2_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.start_co2_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.start_n2o_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.start_n2o_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.start_ar_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.start_ar_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.start_raw_thermal_conductivity_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.start_raw_thermal_conductivity_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.start_o2_in_air_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.start_o2_in_air_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.stop_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.stop_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.read_measurement_data"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.read_measurement_data()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.read_flow"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.read_flow()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.get_raw_temperature"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.get_raw_temperature()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.force_open_valve"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.force_open_valve()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.reset_force_open_valve"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.reset_force_open_valve()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.force_close_valve"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.force_close_valve()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.reset_force_close_valve"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.reset_force_close_valve()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.update_gas_concentration"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.update_gas_concentration()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.prepare_read_gas_calibration"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.prepare_read_gas_calibration()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.read_gas_calibration"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.read_gas_calibration()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.enable_raw_flow_values"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.enable_raw_flow_values()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.disable_raw_flow_values"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase.disable_raw_flow_values()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.sfx6xxx"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.sfx6xxx</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.__init__"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.__init__()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.get_gas_calibration"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.get_gas_calibration()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.start_o2_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.start_o2_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.start_air_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.start_air_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.start_co2_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.start_co2_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.start_n2o_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.start_n2o_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.start_ar_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.start_ar_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.start_o2_in_air_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.start_o2_in_air_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.start_raw_thermal_conductivity_continuous_measurement"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.start_raw_thermal_conductivity_continuous_measurement()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.read_measurement_data_raw"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.read_measurement_data_raw()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.read_measurement_data"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.read_measurement_data()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.read_flow_raw"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.read_flow_raw()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.read_flow"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.read_flow()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.read_raw_temperature"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.read_raw_temperature()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.read_temperature"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.read_temperature()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.update_setpoint"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice.update_setpoint()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-sensirion_i2c_sfx6xxx.commands">Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StatusWordT"><code class="docutils literal notranslate"><span class="pre">StatusWordT</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StatusWordT.gas_conc"><code class="docutils literal notranslate"><span class="pre">StatusWordT.gas_conc</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StatusWordT.pressure_controller_functionality"><code class="docutils literal notranslate"><span class="pre">StatusWordT.pressure_controller_functionality</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StatusWordT.flow_controller_functionality"><code class="docutils literal notranslate"><span class="pre">StatusWordT.flow_controller_functionality</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StatusWordT.command_code"><code class="docutils literal notranslate"><span class="pre">StatusWordT.command_code</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.FlowUnitT"><code class="docutils literal notranslate"><span class="pre">FlowUnitT</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.FlowUnitT.prefix"><code class="docutils literal notranslate"><span class="pre">FlowUnitT.prefix</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.FlowUnitT.time_base"><code class="docutils literal notranslate"><span class="pre">FlowUnitT.time_base</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.FlowUnitT.unit"><code class="docutils literal notranslate"><span class="pre">FlowUnitT.unit</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ErrorCodeT"><code class="docutils literal notranslate"><span class="pre">ErrorCodeT</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ErrorCodeT.I2C_ERROR"><code class="docutils literal notranslate"><span class="pre">ErrorCodeT.I2C_ERROR</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ErrorCodeT.TIMEOUT"><code class="docutils literal notranslate"><span class="pre">ErrorCodeT.TIMEOUT</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier"><code class="docutils literal notranslate"><span class="pre">ReadProductIdentifier</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.CMD_ID"><code class="docutils literal notranslate"><span class="pre">ReadProductIdentifier.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.pack"><code class="docutils literal notranslate"><span class="pre">ReadProductIdentifier.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.tx"><code class="docutils literal notranslate"><span class="pre">ReadProductIdentifier.tx</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.rx"><code class="docutils literal notranslate"><span class="pre">ReadProductIdentifier.rx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer"><code class="docutils literal notranslate"><span class="pre">ResetPointerToMeasurementBuffer</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer.CMD_ID"><code class="docutils literal notranslate"><span class="pre">ResetPointerToMeasurementBuffer.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer.pack"><code class="docutils literal notranslate"><span class="pre">ResetPointerToMeasurementBuffer.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer.tx"><code class="docutils literal notranslate"><span class="pre">ResetPointerToMeasurementBuffer.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateSetpoint"><code class="docutils literal notranslate"><span class="pre">UpdateSetpoint</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateSetpoint.CMD_ID"><code class="docutils literal notranslate"><span class="pre">UpdateSetpoint.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateSetpoint.pack"><code class="docutils literal notranslate"><span class="pre">UpdateSetpoint.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateSetpoint.tx"><code class="docutils literal notranslate"><span class="pre">UpdateSetpoint.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateInitStep"><code class="docutils literal notranslate"><span class="pre">UpdateInitStep</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateInitStep.CMD_ID"><code class="docutils literal notranslate"><span class="pre">UpdateInitStep.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateInitStep.pack"><code class="docutils literal notranslate"><span class="pre">UpdateInitStep.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateInitStep.tx"><code class="docutils literal notranslate"><span class="pre">UpdateInitStep.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain"><code class="docutils literal notranslate"><span class="pre">UpdateCustomerGain</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain.CMD_ID"><code class="docutils literal notranslate"><span class="pre">UpdateCustomerGain.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain.pack"><code class="docutils literal notranslate"><span class="pre">UpdateCustomerGain.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain.tx"><code class="docutils literal notranslate"><span class="pre">UpdateCustomerGain.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartO2ContinuousMeasurement</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement.CMD_ID"><code class="docutils literal notranslate"><span class="pre">StartO2ContinuousMeasurement.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement.pack"><code class="docutils literal notranslate"><span class="pre">StartO2ContinuousMeasurement.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement.tx"><code class="docutils literal notranslate"><span class="pre">StartO2ContinuousMeasurement.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartAirContinuousMeasurement</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement.CMD_ID"><code class="docutils literal notranslate"><span class="pre">StartAirContinuousMeasurement.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement.pack"><code class="docutils literal notranslate"><span class="pre">StartAirContinuousMeasurement.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement.tx"><code class="docutils literal notranslate"><span class="pre">StartAirContinuousMeasurement.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartCo2ContinuousMeasurement</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement.CMD_ID"><code class="docutils literal notranslate"><span class="pre">StartCo2ContinuousMeasurement.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement.pack"><code class="docutils literal notranslate"><span class="pre">StartCo2ContinuousMeasurement.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement.tx"><code class="docutils literal notranslate"><span class="pre">StartCo2ContinuousMeasurement.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartN2oContinuousMeasurement</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement.CMD_ID"><code class="docutils literal notranslate"><span class="pre">StartN2oContinuousMeasurement.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement.pack"><code class="docutils literal notranslate"><span class="pre">StartN2oContinuousMeasurement.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement.tx"><code class="docutils literal notranslate"><span class="pre">StartN2oContinuousMeasurement.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartArContinuousMeasurement</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement.CMD_ID"><code class="docutils literal notranslate"><span class="pre">StartArContinuousMeasurement.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement.pack"><code class="docutils literal notranslate"><span class="pre">StartArContinuousMeasurement.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement.tx"><code class="docutils literal notranslate"><span class="pre">StartArContinuousMeasurement.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartRawThermalConductivityContinuousMeasurement</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement.CMD_ID"><code class="docutils literal notranslate"><span class="pre">StartRawThermalConductivityContinuousMeasurement.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement.pack"><code class="docutils literal notranslate"><span class="pre">StartRawThermalConductivityContinuousMeasurement.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement.tx"><code class="docutils literal notranslate"><span class="pre">StartRawThermalConductivityContinuousMeasurement.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartO2InAirContinuousMeasurement</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement.CMD_ID"><code class="docutils literal notranslate"><span class="pre">StartO2InAirContinuousMeasurement.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement.pack"><code class="docutils literal notranslate"><span class="pre">StartO2InAirContinuousMeasurement.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement.tx"><code class="docutils literal notranslate"><span class="pre">StartO2InAirContinuousMeasurement.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StopContinuousMeasurement</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement.CMD_ID"><code class="docutils literal notranslate"><span class="pre">StopContinuousMeasurement.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement.pack"><code class="docutils literal notranslate"><span class="pre">StopContinuousMeasurement.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement.tx"><code class="docutils literal notranslate"><span class="pre">StopContinuousMeasurement.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadMeasurementData"><code class="docutils literal notranslate"><span class="pre">ReadMeasurementData</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadMeasurementData.pack"><code class="docutils literal notranslate"><span class="pre">ReadMeasurementData.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadMeasurementData.rx"><code class="docutils literal notranslate"><span class="pre">ReadMeasurementData.rx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadFlow"><code class="docutils literal notranslate"><span class="pre">ReadFlow</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadFlow.pack"><code class="docutils literal notranslate"><span class="pre">ReadFlow.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadFlow.rx"><code class="docutils literal notranslate"><span class="pre">ReadFlow.rx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.GetRawTemperature"><code class="docutils literal notranslate"><span class="pre">GetRawTemperature</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.GetRawTemperature.CMD_ID"><code class="docutils literal notranslate"><span class="pre">GetRawTemperature.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.GetRawTemperature.pack"><code class="docutils literal notranslate"><span class="pre">GetRawTemperature.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.GetRawTemperature.tx"><code class="docutils literal notranslate"><span class="pre">GetRawTemperature.tx</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.GetRawTemperature.rx"><code class="docutils literal notranslate"><span class="pre">GetRawTemperature.rx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ForceOpenValve"><code class="docutils literal notranslate"><span class="pre">ForceOpenValve</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ForceOpenValve.CMD_ID"><code class="docutils literal notranslate"><span class="pre">ForceOpenValve.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ForceOpenValve.pack"><code class="docutils literal notranslate"><span class="pre">ForceOpenValve.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ForceOpenValve.tx"><code class="docutils literal notranslate"><span class="pre">ForceOpenValve.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve"><code class="docutils literal notranslate"><span class="pre">ResetForceOpenValve</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve.CMD_ID"><code class="docutils literal notranslate"><span class="pre">ResetForceOpenValve.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve.pack"><code class="docutils literal notranslate"><span class="pre">ResetForceOpenValve.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve.tx"><code class="docutils literal notranslate"><span class="pre">ResetForceOpenValve.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ForceCloseValve"><code class="docutils literal notranslate"><span class="pre">ForceCloseValve</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ForceCloseValve.CMD_ID"><code class="docutils literal notranslate"><span class="pre">ForceCloseValve.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ForceCloseValve.pack"><code class="docutils literal notranslate"><span class="pre">ForceCloseValve.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ForceCloseValve.tx"><code class="docutils literal notranslate"><span class="pre">ForceCloseValve.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve"><code class="docutils literal notranslate"><span class="pre">ResetForceCloseValve</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve.CMD_ID"><code class="docutils literal notranslate"><span class="pre">ResetForceCloseValve.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve.pack"><code class="docutils literal notranslate"><span class="pre">ResetForceCloseValve.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve.tx"><code class="docutils literal notranslate"><span class="pre">ResetForceCloseValve.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration"><code class="docutils literal notranslate"><span class="pre">UpdateGasConcentration</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration.CMD_ID"><code class="docutils literal notranslate"><span class="pre">UpdateGasConcentration.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration.pack"><code class="docutils literal notranslate"><span class="pre">UpdateGasConcentration.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration.tx"><code class="docutils literal notranslate"><span class="pre">UpdateGasConcentration.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration"><code class="docutils literal notranslate"><span class="pre">PrepareReadGasCalibration</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration.CMD_ID"><code class="docutils literal notranslate"><span class="pre">PrepareReadGasCalibration.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration.pack"><code class="docutils literal notranslate"><span class="pre">PrepareReadGasCalibration.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration.tx"><code class="docutils literal notranslate"><span class="pre">PrepareReadGasCalibration.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration"><code class="docutils literal notranslate"><span class="pre">ReadGasCalibration</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.CMD_ID"><code class="docutils literal notranslate"><span class="pre">ReadGasCalibration.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.pack"><code class="docutils literal notranslate"><span class="pre">ReadGasCalibration.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.tx"><code class="docutils literal notranslate"><span class="pre">ReadGasCalibration.tx</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.rx"><code class="docutils literal notranslate"><span class="pre">ReadGasCalibration.rx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues"><code class="docutils literal notranslate"><span class="pre">EnableRawFlowValues</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues.CMD_ID"><code class="docutils literal notranslate"><span class="pre">EnableRawFlowValues.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues.pack"><code class="docutils literal notranslate"><span class="pre">EnableRawFlowValues.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues.tx"><code class="docutils literal notranslate"><span class="pre">EnableRawFlowValues.tx</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues"><code class="docutils literal notranslate"><span class="pre">DisableRawFlowValues</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues.CMD_ID"><code class="docutils literal notranslate"><span class="pre">DisableRawFlowValues.CMD_ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues.pack"><code class="docutils literal notranslate"><span class="pre">DisableRawFlowValues.pack()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues.tx"><code class="docutils literal notranslate"><span class="pre">DisableRawFlowValues.tx</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-sensirion_i2c_sfx6xxx.result_types">Result Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.result_types.SignalTemperature"><code class="docutils literal notranslate"><span class="pre">SignalTemperature</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.result_types.SignalTemperature.value"><code class="docutils literal notranslate"><span class="pre">SignalTemperature.value</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.result_types.SignalFlow"><code class="docutils literal notranslate"><span class="pre">SignalFlow</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.result_types.SignalFlow.value"><code class="docutils literal notranslate"><span class="pre">SignalFlow.value</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.result_types.SignalRawFlow"><code class="docutils literal notranslate"><span class="pre">SignalRawFlow</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#sensirion_i2c_sfx6xxx.result_types.SignalRawFlow.value"><code class="docutils literal notranslate"><span class="pre">SignalRawFlow.value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -121,7 +363,7 @@ It provides a hardware-independent interface which works with various I2C transc
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023 Sensirion AG, Switzerland.</p>
+    <p>&#169; Copyright 2024 Sensirion AG, Switzerland.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

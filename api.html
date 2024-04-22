@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>API Documentation &mdash; sensirion_i2c_sfx6xxx 0.1.0 documentation</title>
@@ -13,10 +13,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=2389946f"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -28,14 +29,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> sensirion_i2c_sfx6xxx
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            sensirion_i2c_sfx6xxx
           </a>
               <div class="version">
                 0.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -47,9 +52,48 @@
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#sfx6xxx">SFX6XXX</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sfx6xxx.device">Sfx6xxxDevice</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sfx6xxx.commands">Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sfx6xxx.result_types">Result Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sfx6xxx.device">Sfx6xxxDevice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDeviceBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice"><code class="docutils literal notranslate"><span class="pre">Sfx6xxxDevice</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sfx6xxx.commands">Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.StatusWordT"><code class="docutils literal notranslate"><span class="pre">StatusWordT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.FlowUnitT"><code class="docutils literal notranslate"><span class="pre">FlowUnitT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.ErrorCodeT"><code class="docutils literal notranslate"><span class="pre">ErrorCodeT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier"><code class="docutils literal notranslate"><span class="pre">ReadProductIdentifier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer"><code class="docutils literal notranslate"><span class="pre">ResetPointerToMeasurementBuffer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.UpdateSetpoint"><code class="docutils literal notranslate"><span class="pre">UpdateSetpoint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.UpdateInitStep"><code class="docutils literal notranslate"><span class="pre">UpdateInitStep</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain"><code class="docutils literal notranslate"><span class="pre">UpdateCustomerGain</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartO2ContinuousMeasurement</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartAirContinuousMeasurement</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartCo2ContinuousMeasurement</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartN2oContinuousMeasurement</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartArContinuousMeasurement</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartRawThermalConductivityContinuousMeasurement</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StartO2InAirContinuousMeasurement</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement"><code class="docutils literal notranslate"><span class="pre">StopContinuousMeasurement</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.ReadMeasurementData"><code class="docutils literal notranslate"><span class="pre">ReadMeasurementData</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.ReadFlow"><code class="docutils literal notranslate"><span class="pre">ReadFlow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.GetRawTemperature"><code class="docutils literal notranslate"><span class="pre">GetRawTemperature</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.ForceOpenValve"><code class="docutils literal notranslate"><span class="pre">ForceOpenValve</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve"><code class="docutils literal notranslate"><span class="pre">ResetForceOpenValve</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.ForceCloseValve"><code class="docutils literal notranslate"><span class="pre">ForceCloseValve</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve"><code class="docutils literal notranslate"><span class="pre">ResetForceCloseValve</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration"><code class="docutils literal notranslate"><span class="pre">UpdateGasConcentration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration"><code class="docutils literal notranslate"><span class="pre">PrepareReadGasCalibration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration"><code class="docutils literal notranslate"><span class="pre">ReadGasCalibration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues"><code class="docutils literal notranslate"><span class="pre">EnableRawFlowValues</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues"><code class="docutils literal notranslate"><span class="pre">DisableRawFlowValues</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sfx6xxx.result_types">Result Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.result_types.SignalTemperature"><code class="docutils literal notranslate"><span class="pre">SignalTemperature</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.result_types.SignalFlow"><code class="docutils literal notranslate"><span class="pre">SignalFlow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sfx6xxx.result_types.SignalRawFlow"><code class="docutils literal notranslate"><span class="pre">SignalRawFlow</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -69,8 +113,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>API Documentation</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API Documentation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,17 +125,17 @@
            <div itemprop="articleBody">
              
   <section id="api-documentation">
-<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline"></a></h1>
+<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this heading"></a></h1>
 <section id="sfx6xxx">
-<h2>SFX6XXX<a class="headerlink" href="#sfx6xxx" title="Permalink to this headline"></a></h2>
+<h2>SFX6XXX<a class="headerlink" href="#sfx6xxx" title="Permalink to this heading"></a></h2>
 <section id="module-sensirion_i2c_sfx6xxx.device">
-<span id="sfx6xxxdevice"></span><h3>Sfx6xxxDevice<a class="headerlink" href="#module-sensirion_i2c_sfx6xxx.device" title="Permalink to this headline"></a></h3>
+<span id="sfx6xxxdevice"></span><h3>Sfx6xxxDevice<a class="headerlink" href="#module-sensirion_i2c_sfx6xxx.device" title="Permalink to this heading"></a></h3>
 <p>The class Sfx6xxxDeviceBase implements the low level interface of the sensor.
 The class Sfx6xxxDevice extends the Sfx6xxxDeviceBase. It provides additional functions to ease the use of the
 sensor.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.device.</span></span><span class="sig-name descname"><span class="pre">Sfx6xxxDeviceBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDeviceBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.device.</span></span><span class="sig-name descname"><span class="pre">Sfx6xxxDeviceBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDeviceBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase" title="Permalink to this definition"></a></dt>
 <dd><p>Low level API implementation of SFX6XXX</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.__init__">
@@ -100,7 +144,7 @@ sensor.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.channel">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">channel</span></span><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.channel" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channel</span></span><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.channel" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -108,10 +152,10 @@ sensor.</p>
 <span class="sig-name descname"><span class="pre">read_product_identifier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDeviceBase.read_product_identifier"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.read_product_identifier" title="Permalink to this definition"></a></dt>
 <dd><p>Read product identifier and the serial number.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return product_identifier</dt>
+<dt class="field-odd">Return product_identifier<span class="colon">:</span></dt>
 <dd class="field-odd"><p>32-bit product and revision number.</p>
 </dd>
-<dt class="field-even">Return serial_number</dt>
+<dt class="field-even">Return serial_number<span class="colon">:</span></dt>
 <dd class="field-even"><p>64-bit unique serial number.</p>
 </dd>
 </dl>
@@ -138,7 +182,7 @@ read header.</p>
 <dd><p>Set the flow setpoint as a physical value which is
 used by the flow controller as reference input.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>setpoint</strong> – The new setpoint. The value has to be given in the
 regular two’s complement format, which is also
 used for the flow value output.</p>
@@ -162,7 +206,7 @@ the MFC. An MFC variant specific InitStep value
 is used by default, which will be applied after a
 hard- or soft-reset of the sensor.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>init_step</strong> – InitStep value in range [0..1] multiplied by 2^16.</p>
 </dd>
 </dl>
@@ -183,7 +227,7 @@ value to the MFC. A value of 1 is used by default
 for the CustomerGain, which will be applied after
 a hard- or soft-reset of the sensor.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>customer_gain</strong> – CustomerGain value in range [0..4] multiplied by 2^14.</p>
 </dd>
 </dl>
@@ -239,7 +283,7 @@ flow value is replaced by the raw thermal conductivity value.</p>
 <span class="sig-name descname"><span class="pre">start_o2_in_air_continuous_measurement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume_fraction</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDeviceBase.start_o2_in_air_continuous_measurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.start_o2_in_air_continuous_measurement" title="Permalink to this definition"></a></dt>
 <dd><p>Start continuous measurement for gas mixture of O2 in Air.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>volume_fraction</strong> – Volume fraction of O2 in Air in per mille (‰).</p>
 </dd>
 </dl>
@@ -264,13 +308,13 @@ receptive for a new command.</p></li>
 <span class="sig-name descname"><span class="pre">read_measurement_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDeviceBase.read_measurement_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.read_measurement_data" title="Permalink to this definition"></a></dt>
 <dd><p>Read out the data from the sensor.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return flow</dt>
+<dt class="field-odd">Return flow<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Calibrated flow signal read from the sensor.</p>
 </dd>
-<dt class="field-even">Return reserved</dt>
+<dt class="field-even">Return reserved<span class="colon">:</span></dt>
 <dd class="field-even"><p>Reserved value for future use.</p>
 </dd>
-<dt class="field-odd">Return status_word</dt>
+<dt class="field-odd">Return status_word<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Contains status information about the read data.</p>
 </dd>
 </dl>
@@ -281,7 +325,7 @@ receptive for a new command.</p></li>
 <span class="sig-name descname"><span class="pre">read_flow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDeviceBase.read_flow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.read_flow" title="Permalink to this definition"></a></dt>
 <dd><p>Read out the flow only from the sensor.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return flow</dt>
+<dt class="field-odd">Return flow<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Calibrated flow signal read from the sensor.</p>
 </dd>
 </dl>
@@ -295,7 +339,7 @@ chip can be read with a special I2C transmission sequence. The sensor must be in
 mode and the temperature is read without interrupting the running measurement. To this end a transmission
 sequence consisting of multiple instructions is detailed in this section.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return temperature</dt>
+<dt class="field-odd">Return temperature<span class="colon">:</span></dt>
 <dd class="field-odd"><p>16-bit temperature</p>
 </dd>
 </dl>
@@ -375,7 +419,7 @@ Call reset_force_close_valve to return to normal valve regulation.</p>
 <span class="sig-name descname"><span class="pre">update_gas_concentration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume_fraction</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDeviceBase.update_gas_concentration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.update_gas_concentration" title="Permalink to this definition"></a></dt>
 <dd><p>Update the concentration of a binary gas mixture dynamically.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>volume_fraction</strong> – New O₂ volume fraction in Air</p>
 </dd>
 </dl>
@@ -393,7 +437,7 @@ Call reset_force_close_valve to return to normal valve regulation.</p>
 <span class="sig-name descname"><span class="pre">prepare_read_gas_calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurement_command</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDeviceBase.prepare_read_gas_calibration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDeviceBase.prepare_read_gas_calibration" title="Permalink to this definition"></a></dt>
 <dd><p>This command prepares read out of gas calibration.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>measurement_command</strong> – The continuous measurement command, that will be used.</p>
 </dd>
 </dl>
@@ -411,19 +455,19 @@ Call reset_force_close_valve to return to normal valve regulation.</p>
 <dd><p>Read the flow scale, offset and unit, full-scale flow and unique gas-ID
 for one of the calibrated gases.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return flow_scale_factor</dt>
+<dt class="field-odd">Return flow_scale_factor<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Scale factor used by the sensor.</p>
 </dd>
-<dt class="field-even">Return flow_offset</dt>
+<dt class="field-even">Return flow_offset<span class="colon">:</span></dt>
 <dd class="field-even"><p>Offset used by the sensor.</p>
 </dd>
-<dt class="field-odd">Return flow_unit</dt>
+<dt class="field-odd">Return flow_unit<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Applicable flow unit.</p>
 </dd>
-<dt class="field-even">Return full_scale_flow</dt>
+<dt class="field-even">Return full_scale_flow<span class="colon">:</span></dt>
 <dd class="field-even"><p>The full-scale flow value as a two’s complement.</p>
 </dd>
-<dt class="field-odd">Return gas_id</dt>
+<dt class="field-odd">Return gas_id<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The unique gas-ID represents the code assigned to a gas by the SEMI standards.</p>
 </dd>
 </dl>
@@ -466,7 +510,7 @@ as opposed to the default linearized flow values.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.device.</span></span><span class="sig-name descname"><span class="pre">Sfx6xxxDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.device.</span></span><span class="sig-name descname"><span class="pre">Sfx6xxxDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice" title="Permalink to this definition"></a></dt>
 <dd><p>Driver class implementation of SFX6XXX</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.sfx6xxx">
@@ -484,22 +528,22 @@ as opposed to the default linearized flow values.</p>
 <span class="sig-name descname"><span class="pre">get_gas_calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurement_command</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDevice.get_gas_calibration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.get_gas_calibration" title="Permalink to this definition"></a></dt>
 <dd><p>Read the flow scale, offset and unit, full-scale flow and unique gas-ID for one of the calibrated gases.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>measurement_command</strong> – The continuous measurement command, that will be used.</p>
 </dd>
-<dt class="field-even">Return flow_scale_factor</dt>
+<dt class="field-even">Return flow_scale_factor<span class="colon">:</span></dt>
 <dd class="field-even"><p>Scale factor used by the sensor.</p>
 </dd>
-<dt class="field-odd">Return flow_offset</dt>
+<dt class="field-odd">Return flow_offset<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Offset used by the sensor.</p>
 </dd>
-<dt class="field-even">Return flow_unit</dt>
+<dt class="field-even">Return flow_unit<span class="colon">:</span></dt>
 <dd class="field-even"><p>Applicable flow unit.</p>
 </dd>
-<dt class="field-odd">Return full_scale_flow</dt>
+<dt class="field-odd">Return full_scale_flow<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The full-scale flow value as a two’s complement.</p>
 </dd>
-<dt class="field-even">Return gas_id</dt>
+<dt class="field-even">Return gas_id<span class="colon">:</span></dt>
 <dd class="field-even"><p>The unique gas-ID represents the code assigned to a gas by the SEMI standards.</p>
 </dd>
 </dl>
@@ -540,7 +584,7 @@ as opposed to the default linearized flow values.</p>
 <span class="sig-name descname"><span class="pre">start_o2_in_air_continuous_measurement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume_fraction</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDevice.start_o2_in_air_continuous_measurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.start_o2_in_air_continuous_measurement" title="Permalink to this definition"></a></dt>
 <dd><p>Start O2 in air measurement and readout the corresponding scale factor from the sensor</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>volume_fraction</strong> – Volume fraction of O2 in Air in per mille (‰).</p>
 </dd>
 </dl>
@@ -557,9 +601,9 @@ as opposed to the default linearized flow values.</p>
 <span class="sig-name descname"><span class="pre">read_measurement_data_raw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDevice.read_measurement_data_raw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.read_measurement_data_raw" title="Permalink to this definition"></a></dt>
 <dd><p>Read raw flow value</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return arg_0</dt>
+<dt class="field-odd">Return arg_0<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
-<dt class="field-even">Return a_status_word</dt>
+<dt class="field-even">Return a_status_word<span class="colon">:</span></dt>
 <dd class="field-even"><p></p></dd>
 </dl>
 </dd></dl>
@@ -569,11 +613,11 @@ as opposed to the default linearized flow values.</p>
 <span class="sig-name descname"><span class="pre">read_measurement_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDevice.read_measurement_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.read_measurement_data" title="Permalink to this definition"></a></dt>
 <dd><p>Read measured data with scaling applied</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return a_flow</dt>
+<dt class="field-odd">Return a_flow<span class="colon">:</span></dt>
 <dd class="field-odd"><p>This signal represents the measured flow. It is scaled with the corresponding scaling factor and
 offset</p>
 </dd>
-<dt class="field-even">Return a_status_word</dt>
+<dt class="field-even">Return a_status_word<span class="colon">:</span></dt>
 <dd class="field-even"><p></p></dd>
 </dl>
 </dd></dl>
@@ -583,7 +627,7 @@ offset</p>
 <span class="sig-name descname"><span class="pre">read_flow_raw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDevice.read_flow_raw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.read_flow_raw" title="Permalink to this definition"></a></dt>
 <dd><p>Read raw flow value in ticks.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return arg_0</dt>
+<dt class="field-odd">Return arg_0<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
 </dl>
 </dd></dl>
@@ -593,7 +637,7 @@ offset</p>
 <span class="sig-name descname"><span class="pre">read_flow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDevice.read_flow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.read_flow" title="Permalink to this definition"></a></dt>
 <dd><p>Read scaled flow value in standard liter per minute.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return a_flow</dt>
+<dt class="field-odd">Return a_flow<span class="colon">:</span></dt>
 <dd class="field-odd"><p>This signal represents the measured flow. It is scaled with the corresponding scaling factor and
 offset</p>
 </dd>
@@ -605,7 +649,7 @@ offset</p>
 <span class="sig-name descname"><span class="pre">read_raw_temperature</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDevice.read_raw_temperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.read_raw_temperature" title="Permalink to this definition"></a></dt>
 <dd><p>Read temperature in degrees celsius.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return arg_0</dt>
+<dt class="field-odd">Return arg_0<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
 </dl>
 </dd></dl>
@@ -615,7 +659,7 @@ offset</p>
 <span class="sig-name descname"><span class="pre">read_temperature</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDevice.read_temperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.read_temperature" title="Permalink to this definition"></a></dt>
 <dd><p>Read temperature in degrees celsius.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return a_temperature</dt>
+<dt class="field-odd">Return a_temperature<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Measured temperature in degrees celsius. The raw value is scaled appropriately.</p>
 </dd>
 </dl>
@@ -626,7 +670,7 @@ offset</p>
 <span class="sig-name descname"><span class="pre">update_setpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flow</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/device.html#Sfx6xxxDevice.update_setpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.device.Sfx6xxxDevice.update_setpoint" title="Permalink to this definition"></a></dt>
 <dd><p>Update the setpoint during active measurement.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>flow</strong> – Setpoint in slm</p>
 </dd>
 </dl>
@@ -642,77 +686,77 @@ offset</p>
 
 </section>
 <section id="module-sensirion_i2c_sfx6xxx.commands">
-<span id="commands"></span><h3>Commands<a class="headerlink" href="#module-sensirion_i2c_sfx6xxx.commands" title="Permalink to this headline"></a></h3>
+<span id="commands"></span><h3>Commands<a class="headerlink" href="#module-sensirion_i2c_sfx6xxx.commands" title="Permalink to this heading"></a></h3>
 <p>The transfer classes specify the data that is transferred between host and sensor. The generated transfer classes
 are used by the driver class and not intended for direct use.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StatusWordT">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StatusWordT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">int_value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StatusWordT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StatusWordT" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StatusWordT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">int_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StatusWordT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StatusWordT" title="Permalink to this definition"></a></dt>
 <dd><dl class="py attribute">
-<dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StatusWordT.command_code">
-<span class="sig-name descname"><span class="pre">command_code</span></span><em class="property"> <span class="pre">=</span> <span class="pre">BitField(offset=12,</span> <span class="pre">width=4)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StatusWordT.command_code" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StatusWordT.flow_controller_functionality">
-<span class="sig-name descname"><span class="pre">flow_controller_functionality</span></span><em class="property"> <span class="pre">=</span> <span class="pre">BitField(offset=11,</span> <span class="pre">width=1)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StatusWordT.flow_controller_functionality" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StatusWordT.gas_conc">
+<span class="sig-name descname"><span class="pre">gas_conc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">BitField(offset=0,</span> <span class="pre">width=10)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StatusWordT.gas_conc" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StatusWordT.pressure_controller_functionality">
-<span class="sig-name descname"><span class="pre">pressure_controller_functionality</span></span><em class="property"> <span class="pre">=</span> <span class="pre">BitField(offset=10,</span> <span class="pre">width=1)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StatusWordT.pressure_controller_functionality" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">pressure_controller_functionality</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">BitField(offset=10,</span> <span class="pre">width=1)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StatusWordT.pressure_controller_functionality" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StatusWordT.gas_conc">
-<span class="sig-name descname"><span class="pre">gas_conc</span></span><em class="property"> <span class="pre">=</span> <span class="pre">BitField(offset=0,</span> <span class="pre">width=10)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StatusWordT.gas_conc" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StatusWordT.flow_controller_functionality">
+<span class="sig-name descname"><span class="pre">flow_controller_functionality</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">BitField(offset=11,</span> <span class="pre">width=1)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StatusWordT.flow_controller_functionality" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StatusWordT.command_code">
+<span class="sig-name descname"><span class="pre">command_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">BitField(offset=12,</span> <span class="pre">width=4)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StatusWordT.command_code" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.FlowUnitT">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">FlowUnitT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">int_value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#FlowUnitT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.FlowUnitT" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">FlowUnitT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">int_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#FlowUnitT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.FlowUnitT" title="Permalink to this definition"></a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.FlowUnitT.prefix">
-<span class="sig-name descname"><span class="pre">prefix</span></span><em class="property"> <span class="pre">=</span> <span class="pre">BitField(offset=0,</span> <span class="pre">width=3)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.FlowUnitT.prefix" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">prefix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">BitField(offset=0,</span> <span class="pre">width=4)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.FlowUnitT.prefix" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.FlowUnitT.time_base">
-<span class="sig-name descname"><span class="pre">time_base</span></span><em class="property"> <span class="pre">=</span> <span class="pre">BitField(offset=4,</span> <span class="pre">width=4)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.FlowUnitT.time_base" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">time_base</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">BitField(offset=4,</span> <span class="pre">width=4)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.FlowUnitT.time_base" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.FlowUnitT.unit">
-<span class="sig-name descname"><span class="pre">unit</span></span><em class="property"> <span class="pre">=</span> <span class="pre">BitField(offset=8,</span> <span class="pre">width=4)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.FlowUnitT.unit" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">unit</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">BitField(offset=8,</span> <span class="pre">width=5)</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.FlowUnitT.unit" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ErrorCodeT">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ErrorCodeT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ErrorCodeT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ErrorCodeT" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ErrorCodeT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ErrorCodeT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ErrorCodeT" title="Permalink to this definition"></a></dt>
 <dd><p>An enumeration.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ErrorCodeT.I2C_ERROR">
-<span class="sig-name descname"><span class="pre">I2C_ERROR</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ErrorCodeT.I2C_ERROR" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">I2C_ERROR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ErrorCodeT.I2C_ERROR" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ErrorCodeT.TIMEOUT">
-<span class="sig-name descname"><span class="pre">TIMEOUT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ErrorCodeT.TIMEOUT" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">TIMEOUT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ErrorCodeT.TIMEOUT" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ReadProductIdentifier</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ReadProductIdentifier"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ReadProductIdentifier</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ReadProductIdentifier"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier" title="Permalink to this definition"></a></dt>
 <dd><p>Read product identifier and the serial number.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">57602</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">57602</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -722,26 +766,26 @@ are used by the driver class and not intended for direct use.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.rx">
-<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.rx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadProductIdentifier.rx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ResetPointerToMeasurementBuffer</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ResetPointerToMeasurementBuffer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ResetPointerToMeasurementBuffer</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ResetPointerToMeasurementBuffer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer" title="Permalink to this definition"></a></dt>
 <dd><p>This instruction resets the I2C address pointer to
 the regular result output buffer such that the
 measurement data are obtained upon a subsequent
 read header.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">57344</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">57344</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -751,19 +795,19 @@ read header.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetPointerToMeasurementBuffer.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.UpdateSetpoint">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">UpdateSetpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">setpoint</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#UpdateSetpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateSetpoint" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">UpdateSetpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">setpoint</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#UpdateSetpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateSetpoint" title="Permalink to this definition"></a></dt>
 <dd><p>Set the flow setpoint as a physical value which is
 used by the flow controller as reference input.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.UpdateSetpoint.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">61524</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateSetpoint.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">61524</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateSetpoint.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -773,21 +817,21 @@ used by the flow controller as reference input.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.UpdateSetpoint.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateSetpoint.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateSetpoint.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.UpdateInitStep">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">UpdateInitStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_step</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#UpdateInitStep"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateInitStep" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">UpdateInitStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_step</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#UpdateInitStep"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateInitStep" title="Permalink to this definition"></a></dt>
 <dd><p>This instruction transmits the InitStep value to
 the MFC. An MFC variant specific InitStep value
 is used by default, which will be applied after a
 hard- or soft-reset of the sensor.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.UpdateInitStep.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">57785</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateInitStep.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">57785</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateInitStep.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -797,21 +841,21 @@ hard- or soft-reset of the sensor.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.UpdateInitStep.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateInitStep.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateInitStep.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">UpdateCustomerGain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">customer_gain</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#UpdateCustomerGain"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">UpdateCustomerGain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">customer_gain</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#UpdateCustomerGain"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain" title="Permalink to this definition"></a></dt>
 <dd><p>This instruction transmits the CustomerGain
 value to the MFC. A value of 1 is used by default
 for the CustomerGain, which will be applied after
 a hard- or soft-reset of the sensor.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">57778</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">57778</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -821,18 +865,18 @@ a hard- or soft-reset of the sensor.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateCustomerGain.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartO2ContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartO2ContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartO2ContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartO2ContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement" title="Permalink to this definition"></a></dt>
 <dd><p>Start continuous O₂ measurement.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13827</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13827</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -842,18 +886,18 @@ a hard- or soft-reset of the sensor.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartO2ContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartAirContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartAirContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartAirContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartAirContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement" title="Permalink to this definition"></a></dt>
 <dd><p>Start continuous air measurement.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13832</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13832</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -863,18 +907,18 @@ a hard- or soft-reset of the sensor.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartAirContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartCo2ContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartCo2ContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartCo2ContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartCo2ContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement" title="Permalink to this definition"></a></dt>
 <dd><p>Start continuous CO₂ measurement.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13845</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13845</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -884,18 +928,18 @@ a hard- or soft-reset of the sensor.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartCo2ContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartN2oContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartN2oContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartN2oContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartN2oContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement" title="Permalink to this definition"></a></dt>
 <dd><p>Start continuous N₂O measurement.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13854</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13854</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -905,18 +949,18 @@ a hard- or soft-reset of the sensor.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartN2oContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartArContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartArContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartArContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartArContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement" title="Permalink to this definition"></a></dt>
 <dd><p>Start continuous Ar measurement.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13860</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13860</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -926,20 +970,20 @@ a hard- or soft-reset of the sensor.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartArContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartRawThermalConductivityContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartRawThermalConductivityContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartRawThermalConductivityContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartRawThermalConductivityContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement" title="Permalink to this definition"></a></dt>
 <dd><p>Start measurement for raw thermal conductivity.
 In this measurement mode the valve remains closed and the
 flow value is replaced by the raw thermal conductivity value.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13860</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13860</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -949,18 +993,18 @@ flow value is replaced by the raw thermal conductivity value.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartRawThermalConductivityContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartO2InAirContinuousMeasurement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume_fraction</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartO2InAirContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StartO2InAirContinuousMeasurement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume_fraction</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StartO2InAirContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement" title="Permalink to this definition"></a></dt>
 <dd><p>Start continuous measurement for gas mixture of O2 in Air.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13904</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13904</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -970,18 +1014,18 @@ flow value is replaced by the raw thermal conductivity value.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StartO2InAirContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StopContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StopContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">StopContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#StopContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement" title="Permalink to this definition"></a></dt>
 <dd><p>This transfer stops the continuous measurement and puts the sensor in idle mode.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">16377</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16377</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -991,14 +1035,14 @@ flow value is replaced by the raw thermal conductivity value.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.StopContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadMeasurementData">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ReadMeasurementData</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ReadMeasurementData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadMeasurementData" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ReadMeasurementData</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ReadMeasurementData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadMeasurementData" title="Permalink to this definition"></a></dt>
 <dd><p>Read out the data from the sensor.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadMeasurementData.pack">
@@ -1007,14 +1051,14 @@ flow value is replaced by the raw thermal conductivity value.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadMeasurementData.rx">
-<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadMeasurementData.rx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadMeasurementData.rx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadFlow">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ReadFlow</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ReadFlow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadFlow" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ReadFlow</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ReadFlow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadFlow" title="Permalink to this definition"></a></dt>
 <dd><p>Read out the flow only from the sensor.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadFlow.pack">
@@ -1023,21 +1067,21 @@ flow value is replaced by the raw thermal conductivity value.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadFlow.rx">
-<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadFlow.rx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadFlow.rx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.GetRawTemperature">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">GetRawTemperature</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#GetRawTemperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.GetRawTemperature" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">GetRawTemperature</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#GetRawTemperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.GetRawTemperature" title="Permalink to this definition"></a></dt>
 <dd><p>While the sensor is in continuous measurement mode, the temperature of the bulk silicon in the flow-sensor
 chip can be read with a special I2C transmission sequence. The sensor must be in continuous measurement
 mode and the temperature is read without interrupting the running measurement. To this end a transmission
 sequence consisting of multiple instructions is detailed in this section.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.GetRawTemperature.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">57602</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.GetRawTemperature.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">57602</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.GetRawTemperature.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1047,24 +1091,24 @@ sequence consisting of multiple instructions is detailed in this section.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.GetRawTemperature.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.GetRawTemperature.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.GetRawTemperature.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.GetRawTemperature.rx">
-<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.GetRawTemperature.rx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.GetRawTemperature.rx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ForceOpenValve">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ForceOpenValve</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ForceOpenValve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ForceOpenValve" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ForceOpenValve</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ForceOpenValve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ForceOpenValve" title="Permalink to this definition"></a></dt>
 <dd><p>Fully opens the valve. The flow value can still be read from the sensor.
 Call reset_force_open_valve to return to normal valve regulation.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ForceOpenValve.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">16356</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ForceOpenValve.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16356</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ForceOpenValve.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1074,18 +1118,18 @@ Call reset_force_open_valve to return to normal valve regulation.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ForceOpenValve.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ForceOpenValve.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ForceOpenValve.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ResetForceOpenValve</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ResetForceOpenValve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ResetForceOpenValve</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ResetForceOpenValve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve" title="Permalink to this definition"></a></dt>
 <dd><p>Return to normal valve regulation after fully opening the valve.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">16229</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16229</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1095,19 +1139,19 @@ Call reset_force_open_valve to return to normal valve regulation.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetForceOpenValve.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ForceCloseValve">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ForceCloseValve</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ForceCloseValve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ForceCloseValve" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ForceCloseValve</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ForceCloseValve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ForceCloseValve" title="Permalink to this definition"></a></dt>
 <dd><p>Fully closes the valve. The flow value can still be read from the sensor.
 Call reset_force_close_valve to return to normal valve regulation.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ForceCloseValve.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">16367</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ForceCloseValve.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16367</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ForceCloseValve.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1117,18 +1161,18 @@ Call reset_force_close_valve to return to normal valve regulation.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ForceCloseValve.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ForceCloseValve.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ForceCloseValve.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ResetForceCloseValve</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ResetForceCloseValve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ResetForceCloseValve</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ResetForceCloseValve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve" title="Permalink to this definition"></a></dt>
 <dd><p>Return to normal valve regulation after force closing the valve.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">16238</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16238</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1138,18 +1182,18 @@ Call reset_force_close_valve to return to normal valve regulation.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ResetForceCloseValve.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">UpdateGasConcentration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume_fraction</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#UpdateGasConcentration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">UpdateGasConcentration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume_fraction</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#UpdateGasConcentration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration" title="Permalink to this definition"></a></dt>
 <dd><p>Update the concentration of a binary gas mixture dynamically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">57725</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">57725</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1159,18 +1203,18 @@ Call reset_force_close_valve to return to normal valve regulation.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.UpdateGasConcentration.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">PrepareReadGasCalibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurement_command</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#PrepareReadGasCalibration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">PrepareReadGasCalibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurement_command</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#PrepareReadGasCalibration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration" title="Permalink to this definition"></a></dt>
 <dd><p>This command prepares read out of gas calibration.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13921</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13921</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1180,19 +1224,19 @@ Call reset_force_close_valve to return to normal valve regulation.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.PrepareReadGasCalibration.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadGasCalibration">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ReadGasCalibration</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ReadGasCalibration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">ReadGasCalibration</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#ReadGasCalibration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration" title="Permalink to this definition"></a></dt>
 <dd><p>Read the flow scale, offset and unit, full-scale flow and unique gas-ID
 for one of the calibrated gases.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">57681</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">57681</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1202,25 +1246,25 @@ for one of the calibrated gases.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.rx">
-<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.rx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.ReadGasCalibration.rx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">EnableRawFlowValues</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#EnableRawFlowValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">EnableRawFlowValues</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#EnableRawFlowValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues" title="Permalink to this definition"></a></dt>
 <dd><p>There might be special cases where it is beneficial to read the uncalibrated raw flow value from the sensor.
 To this end a dedicated command can be issued requesting the sensor to return the uncalibrated raw flow values
 as opposed to the default linearized flow values.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">16350</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16350</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1230,18 +1274,18 @@ as opposed to the default linearized flow values.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.EnableRawFlowValues.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">DisableRawFlowValues</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#DisableRawFlowValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.commands.</span></span><span class="sig-name descname"><span class="pre">DisableRawFlowValues</span></span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/commands.html#DisableRawFlowValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues" title="Permalink to this definition"></a></dt>
 <dd><p>Causes the sensor to switch back to normalized flow values.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">16223</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues.CMD_ID" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16223</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues.CMD_ID" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1251,46 +1295,46 @@ as opposed to the default linearized flow values.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues.tx" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sfx6xxx.commands.DisableRawFlowValues.tx" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="module-sensirion_i2c_sfx6xxx.result_types">
-<span id="result-types"></span><h3>Result Types<a class="headerlink" href="#module-sensirion_i2c_sfx6xxx.result_types" title="Permalink to this headline"></a></h3>
+<span id="result-types"></span><h3>Result Types<a class="headerlink" href="#module-sensirion_i2c_sfx6xxx.result_types" title="Permalink to this heading"></a></h3>
 <p>The signal classes specify transformations of the raw sensor signals into a meaningful units.
 The generated signal types are used by the driver class and not intended for direct use.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.result_types.SignalTemperature">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalTemperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temperature_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/result_types.html#SignalTemperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.result_types.SignalTemperature" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalTemperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temperature_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/result_types.html#SignalTemperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.result_types.SignalTemperature" title="Permalink to this definition"></a></dt>
 <dd><p>Measured temperature in degrees celsius. The raw value is scaled appropriately.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.result_types.SignalTemperature.value">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sfx6xxx.result_types.SignalTemperature.value" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sfx6xxx.result_types.SignalTemperature.value" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.result_types.SignalFlow">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalFlow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flow_raw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_scale_factor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_offset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/result_types.html#SignalFlow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.result_types.SignalFlow" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalFlow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flow_raw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_scale_factor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_offset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/result_types.html#SignalFlow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.result_types.SignalFlow" title="Permalink to this definition"></a></dt>
 <dd><p>This signal represents the measured flow. It is scaled with the corresponding scaling factor and
 offset</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.result_types.SignalFlow.value">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sfx6xxx.result_types.SignalFlow.value" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sfx6xxx.result_types.SignalFlow.value" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.result_types.SignalRawFlow">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalRawFlow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_scale_factor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_offset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/result_types.html#SignalRawFlow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.result_types.SignalRawFlow" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sfx6xxx.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalRawFlow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_scale_factor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_offset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sfx6xxx/result_types.html#SignalRawFlow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sfx6xxx.result_types.SignalRawFlow" title="Permalink to this definition"></a></dt>
 <dd><p>This signal converts a user flow input from float into the twos-complement representation</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="sensirion_i2c_sfx6xxx.result_types.SignalRawFlow.value">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sfx6xxx.result_types.SignalRawFlow.value" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sfx6xxx.result_types.SignalRawFlow.value" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1309,7 +1353,7 @@ offset</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023 Sensirion AG, Switzerland.</p>
+    <p>&#169; Copyright 2024 Sensirion AG, Switzerland.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
