@@ -7,7 +7,7 @@
 #
 # Generator:     sensirion-driver-generator 0.40.1
 # Product:       sfx6xxx
-# Model-Version: 2.3.0
+# Model-Version: 2.3.1
 #
 """
 The class Sfx6xxxDeviceBase implements the low level interface of the sensor.
