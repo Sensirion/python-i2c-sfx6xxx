@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fix update setpoint shows wrong argument
+- Fix wrong data format in read product identifier
 
 ## [1.0.0] - 2024-4-22
 
