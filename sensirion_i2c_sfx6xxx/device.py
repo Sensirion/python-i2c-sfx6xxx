@@ -513,5 +513,5 @@ class Sfx6xxxDevice(Sfx6xxxDeviceBase):
             - Only applicable for SFC6xxx mass flow controllers.
         """
         raw_flow = SignalRawFlow(flow, self._flow_scale_factor, self._flow_offset)
-        self.sfx6xxx.update_setpoint(raw_flow)
+        self.sfx6xxx.update_setpoint(raw_flow.value)
         return self.sfx6xxx.reset_pointer_to_measurement_buffer()

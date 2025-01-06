@@ -50,7 +50,7 @@ class ReadProductIdentifier(Transfer):
         return self.tx_data.pack([])
 
     tx = TxData(CMD_ID, '>H')
-    rx = RxData(descriptor='>I8B', convert_to_int=True)
+    rx = RxData(descriptor='>IQ', convert_to_int=True)
 
 
 class ResetPointerToMeasurementBuffer(Transfer):

@@ -53,7 +53,7 @@ class SignalRawFlow(AbstractSignal):
     """This signal converts a user flow input from float into the twos-complement representation"""
 
     def __init__(self, flow, flow_scale_factor, flow_offset):
-        self._raw_flow = int(flow * flow_scale_factor) + flow_offset
+        self._raw_flow = int(flow * flow_scale_factor + flow_offset)
 
     @property
     def value(self):
