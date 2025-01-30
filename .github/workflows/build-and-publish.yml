@@ -10,3 +10,4 @@ jobs:
       uses: sensirion/.github/.github/workflows/driver.python.pypi_publish.yml@main
       secrets:
         PYPI_API_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
+
