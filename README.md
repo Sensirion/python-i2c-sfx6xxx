@@ -29,7 +29,7 @@ The following instructions and examples use a *SFC6000*.
 
 ## Connect the sensor
 
-You can connect your sensor over a [SEK-SensorBridge](https://developer.sensirion.com/product-support/sek-sensorbridge/).
+You can connect your sensor over a [SEK-SensorBridge](https://developer.sensirion.com/sensirion-products/sek-sensorbridge/).
 For special setups you find the sensor pinout in the section below.
 
 <details><summary>Sensor pinout</summary>
@@ -58,12 +58,6 @@ See the [documentation page](https://sensirion.github.io/python-i2c-sfx6xxx) for
 
 
 ## Contributing
-
-We develop and test this driver using our company internal tools (version
-control, continuous integration, code review etc.) and automatically
-synchronize the `master` branch with GitHub. But this doesn't mean that we
-don't respond to issues or don't accept pull requests on GitHub. In fact,
-you're very welcome to open issues or create pull requests :-)
 
 ### Check coding style
 
